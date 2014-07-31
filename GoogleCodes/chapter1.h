@@ -37,6 +37,36 @@ static bool checkUniqueString2(std::string input) {
     return true;
 }
 
+// question 1.1 - solution 3
+static bool checkUniqueString3(std::string input) {
+    if (input.size() > 74)
+        return false;
+    
+    int lowbits = 0;
+    int midbits = 0;
+    int highbits = 0;
+    for (int i = 0; i < input.size();++i) {
+        int bits = input.at(i) - '1';
+        if (bits > 63) {
+            if ( (highbits & (1 << (bits - 63))) > 0)
+                return false;
+            else
+                highbits |= (1 << (bits - 63));
+        } else if (31 < bits && bits <= 63){
+            if ( (midbits & (1 << (bits - 31))) > 0)
+                return false;
+            else
+                midbits |= (1 << (bits - 31));
+        } else {
+            if ( (lowbits & (1<<bits)) > 0 )
+                return false;
+            else
+                lowbits |= (1 << bits);
+        }
+    }
+    return true;
+}
+
 // question 1.2
 static void reverse(std::string& input) {
     size_t length = input.length();

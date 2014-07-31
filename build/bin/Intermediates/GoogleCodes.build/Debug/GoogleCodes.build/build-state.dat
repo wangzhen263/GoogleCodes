@@ -30,6 +30,11 @@ c00000000533B7C60000000000006E8B0
 t1396407392
 s452784
 
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.dylib
+c00000000533B7C6000000000000A2A44
+t1396407392
+s666180
+
 N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
 c00000000533B7C600000000000004734
 t1396407392
@@ -191,14 +196,14 @@ t1397174881
 s6000
 
 N/Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/chapter1.h
-c0000000053CD1E360000000000000832
-t1405951542
-s2098
+c0000000053DA06240000000000000B72
+t1406797348
+s2930
 
 N/Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/main.cpp
-c0000000053CD1E7E000000000000042C
-t1405951614
-s1068
+c0000000053DA091D000000000000043F
+t1406798109
+s1087
 
 N/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/GoogleCodes.LinkFileList
 c0000000053C4D2BF0000000000000093
@@ -206,23 +211,23 @@ t1405407935
 s147
 
 N/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.o
-t1405951614
-s221216
+t1406798110
+s134276
 
 N/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug/GoogleCodes
-t1405951614
-s45172
+t1406798069
+s56368
 
 CBuild AST from /Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/main.cpp
 r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies68220820567db941^486b0820567db941^---0#1#1#--18"Check dependencies36"7EC10295-2782-44C7-9240-846D6C16DC72-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies2592f09d408ab941^35eff09d408ab941^---0#1#1#--18"Check dependencies36"4743E1CA-0E95-4702-A948-11613E5068F7-
 
 CCompileC build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.o /Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s427644414.418787
-e427644414.796957
+s428490909.940689
+e428490910.131354
 r1
 xCompileC
 xbuild/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.o
@@ -233,12 +238,12 @@ xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/main.cpp
 d/Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/chapter1.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/main.cpp186"CompileC build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.o GoogleCodes/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compilerfa436bfe557db941^5b06ccfe557db941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/main.cpp0000000000000000^3242"CompileC build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.o GoogleCodes/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jeffwang/Develop/github_projects/GoogleCodes    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -fmodules -fmodules-cache-path=/Users/jeffwang/Develop/github_projects/GoogleCodes/build/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/GoogleCodes-generated-files.hmap -I/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/GoogleCodes-own-target-headers.hmap -I/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/GoogleCodes-all-target-headers.hmap -iquote /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/GoogleCodes-project-headers.hmap -I/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/DerivedSources/x86_64 -I/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/DerivedSources -F/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug -MMD -MT dependencies -MF /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.dia -c /Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/main.cpp -o /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.o36"3F10C7D6-33EC-4EB1-80E7-E73E75E80D53-
-b670FE3C2-B85B-40DD-8695-90933D4DE1B7
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/main.cpp186"CompileC build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.o GoogleCodes/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler6c09f19d408ab941^eca1219e408ab941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/main.cpp0000000000000000^3245"CompileC build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.o GoogleCodes/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jeffwang/Develop/github_projects/GoogleCodes    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libstdc++ -fmodules -fmodules-cache-path=/Users/jeffwang/Develop/github_projects/GoogleCodes/build/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/GoogleCodes-generated-files.hmap -I/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/GoogleCodes-own-target-headers.hmap -I/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/GoogleCodes-all-target-headers.hmap -iquote /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/GoogleCodes-project-headers.hmap -I/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/DerivedSources/x86_64 -I/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/DerivedSources -F/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug -MMD -MT dependencies -MF /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.dia -c /Users/jeffwang/Develop/github_projects/GoogleCodes/GoogleCodes/main.cpp -o /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.o36"8F37C667-2F2F-49F4-B57A-D11CB05DE1D2-
+b4ECC43F0-8258-42BE-819F-3767D2DD98C1
 
 CLd /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug/GoogleCodes normal x86_64
-s427644414.797894
-e427644414.813934
+s428490910.132259
+e428490910.149714
 r1
 xLd
 x/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug/GoogleCodes
@@ -246,7 +251,7 @@ xnormal
 xx86_64
 d/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/GoogleCodes.LinkFileList
 d/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/main.o
-d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libc++.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libstdc++.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
 d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.osx.a
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
@@ -279,6 +284,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Link /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug/GoogleCodes53"Ld build/bin/Products/Debug/GoogleCodes normal x86_64ad4cccfe557db941^3560d0fe557db941^---0#0#1#--1048"Ld build/bin/Products/Debug/GoogleCodes normal x86_64    cd /Users/jeffwang/Develop/github_projects/GoogleCodes    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug -F/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug -filelist /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/GoogleCodes.LinkFileList -mmacosx-version-min=10.9 -stdlib=libc++ -Xlinker -dependency_info -Xlinker /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/GoogleCodes_dependency_info.dat -o /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug/GoogleCodes36"E91F7852-04C1-49DD-A9AF-83EDBB743153-
-b670FE3C2-B85B-40DD-8695-90933D4DE1B7
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Link /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug/GoogleCodes53"Ld build/bin/Products/Debug/GoogleCodes normal x86_648ae6219e408ab941^2e54269e408ab941^---0#0#1#--1051"Ld build/bin/Products/Debug/GoogleCodes normal x86_64    cd /Users/jeffwang/Develop/github_projects/GoogleCodes    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug -F/Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug -filelist /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/GoogleCodes.LinkFileList -mmacosx-version-min=10.9 -stdlib=libstdc++ -Xlinker -dependency_info -Xlinker /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Intermediates/GoogleCodes.build/Debug/GoogleCodes.build/Objects-normal/x86_64/GoogleCodes_dependency_info.dat -o /Users/jeffwang/Develop/github_projects/GoogleCodes/build/bin/Products/Debug/GoogleCodes36"C8DD9228-4B85-4FD4-ADB3-CC04CC6F7214-
+b4ECC43F0-8258-42BE-819F-3767D2DD98C1
 

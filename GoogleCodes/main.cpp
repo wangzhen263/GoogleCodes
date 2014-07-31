@@ -7,34 +7,24 @@
 //
 
 #include <iostream>
-#include <chrono>
 #include "chapter1.h"
 
 int main(int argc, const char * argv[])
 {
-    typedef std::chrono::high_resolution_clock Time;
-    typedef std::chrono::milliseconds ms;
-    typedef std::chrono::duration<float> fsec;
-    
     // input: 3yWYfPLfplC3f5k
-    std::string input = "3yWYfPLfplC3f5k";
+    std::string input1_1 = "3yWYfPLfplC3f5k";
+    std::string input1_1_2 = "abcdefgABCDEFG";
     
-    auto t0 = Time::now();
-    printf("result1: %d. \n", checkUniqueString1(input));
-    auto t1 = Time::now();
-    fsec fs = t1 - t0;
-    ms d = std::chrono::duration_cast<ms>(fs);
-    std::cout << d.count() << "ms\n";
+    printf("result1: expect: 0, actually: %d. \n", checkUniqueString1(input1_1));
+    printf("result2: expect: 0, actually: %d. \n", checkUniqueString2(input1_1));
+    printf("result3: expect: 0, actually: %d. \n", checkUniqueString3(input1_1));
+    printf("result4: expect: 1, actually: %d. \n", checkUniqueString1(input1_1_2));
+    printf("result5: expect: 1, actually: %d. \n", checkUniqueString2(input1_1_2));
+    printf("result6: expect: 1, actually: %d. \n", checkUniqueString3(input1_1_2));
     
-    auto t2 = Time::now();
-    printf("result2: %d. \n", checkUniqueString2(input));
-    auto t3 = Time::now();
-    fsec fs2 = t2 - t3;
-    ms d2 = std::chrono::duration_cast<ms>(fs2);
-    std::cout << d2.count() << "ms\n";
-    
-    reverse(input);
-    printf("result 1.2: %s\n", input.c_str());
+    std::string input1_2 = "abcdefgGFEDCBA";
+    reverse(input1_2);
+    printf("result 1.2: expect: ABCDEFGgfedcba, actually: %s\n", input1_2.c_str());
     
     printf("result 1.3: %d\n", isPermutation("abcd", "dbac"));
     

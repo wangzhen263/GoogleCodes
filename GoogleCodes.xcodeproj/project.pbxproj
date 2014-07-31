@@ -199,6 +199,8 @@
 		0D89AA9C1974FDDA008AF31B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -206,6 +208,8 @@
 		0D89AA9D1974FDDA008AF31B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
