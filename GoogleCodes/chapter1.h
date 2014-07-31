@@ -78,30 +78,54 @@ static void reverse(std::string& input) {
     }
 }
 
-// question 1.3
-#include <map>
-static bool isPermutation(std::string str1, std::string str2) {
-    if (str1.length() != str2.length())
+// question 1.3 - solution 1
+static bool isPermutation1(std::string str1, std::string str2) {
+    if (str1.size() != str2.size())
         return false;
-    
-    std::map<char, int> mstr1;
-    std::map<char, int>::iterator it1;
-    for (int index = 0; index < str1.length(); ++index){
-        if ((it1 = mstr1.find( str1[index] )) != mstr1.end())
-            mstr1[ str1[index] ]++;
-        else
-            mstr1[ str1[index] ] = 1;
+    std::sort(str1.begin(), str1.end());
+    std::sort(str2.begin(), str2.end());
+    for(int i = 0; i < str1.size(); ++i) {
+        if (str1[i] != str2[i])
+            return false;
     }
-    
-    std::map<char, int> mstr2;
-    std::map<char, int>::iterator it2;
-    for (int index = 0; index < str2.length(); ++index){
-        if ((it2 = mstr2.find( str2[index] )) != mstr2.end())
-            mstr2[ str2[index] ]++;
-        else
-            mstr2[ str2[index] ] = 1;
+    return true;
+}
+
+// question 1.3 - solution 2
+static bool isPermutation2(std::string str1, std::string str2) {
+    if (str1.size() != str2.size())
+        return false;
+    int* ascii_set = new int[256]();
+    for(int i = 0; i < str1.size(); ++i) {
+        ascii_set[str1.at(i)]++;
     }
-    
-    return mstr1.size() == mstr2.size() && std::equal(mstr1.begin(), mstr1.end(), mstr2.begin());
+    for(int i = 0; i < str2.size(); ++i) {
+        if ( (--ascii_set[str2.at(i)]) < 0 ) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// question 1.4 - solution 1
+static void replaceSpace(char str[], int length) {
+    bool isBetweenChars = false;
+    char* tempString = new char[length];
+    int tempPos = 0;
+    for(int i = 0; i < length; ++i){
+        if (str[i] != ' ') {
+            isBetweenChars = true;
+            if (tempPos < length)
+                tempString[tempPos++] = str[i];
+        } else {
+            if (isBetweenChars) {
+                isBetweenChars = false;
+                if (tempPos < length) tempString[tempPos++] = '%';
+                if (tempPos < length) tempString[tempPos++] = '2';
+                if (tempPos < length) tempString[tempPos++] = '0';
+            }
+        }
+    }
+    memcpy(str, tempString, length);
 }
 #endif

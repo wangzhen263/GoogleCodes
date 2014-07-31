@@ -15,18 +15,25 @@ int main(int argc, const char * argv[])
     std::string input1_1 = "3yWYfPLfplC3f5k";
     std::string input1_1_2 = "abcdefgABCDEFG";
     
-    printf("result1: expect: 0, actually: %d. \n", checkUniqueString1(input1_1));
-    printf("result2: expect: 0, actually: %d. \n", checkUniqueString2(input1_1));
-    printf("result3: expect: 0, actually: %d. \n", checkUniqueString3(input1_1));
-    printf("result4: expect: 1, actually: %d. \n", checkUniqueString1(input1_1_2));
-    printf("result5: expect: 1, actually: %d. \n", checkUniqueString2(input1_1_2));
-    printf("result6: expect: 1, actually: %d. \n", checkUniqueString3(input1_1_2));
+    printf("result1: question 1.1 expect: 0, actually: %d. \n", checkUniqueString1(input1_1));
+    printf("result2: question 1.1 expect: 0, actually: %d. \n", checkUniqueString2(input1_1));
+    printf("result3: question 1.1 expect: 0, actually: %d. \n", checkUniqueString3(input1_1));
+    printf("result4: question 1.1 expect: 1, actually: %d. \n", checkUniqueString1(input1_1_2));
+    printf("result5: question 1.1 expect: 1, actually: %d. \n", checkUniqueString2(input1_1_2));
+    printf("result6: question 1.1 expect: 1, actually: %d. \n", checkUniqueString3(input1_1_2));
     
     std::string input1_2 = "abcdefgGFEDCBA";
     reverse(input1_2);
-    printf("result 1.2: expect: ABCDEFGgfedcba, actually: %s\n", input1_2.c_str());
+    printf("result7: question 1.2 expect: ABCDEFGgfedcba, actually: %s\n", input1_2.c_str());
     
-    printf("result 1.3: %d\n", isPermutation("abcd", "dbac"));
+    std::string input1_3_1 = "abcdefgGFEDCBA";
+    std::string input1_3_2 = "ABCDEFGgfedcba";
+    printf("result8: question 1.3 expect: 1, actually: %d\n", isPermutation1(input1_3_1, input1_3_2));
+    printf("result9: question 1.3 expect: 1, actually: %d\n", isPermutation2(input1_3_1, input1_3_2));
+    
+    char input1_4[] = "Mr John Smith    ";
+    replaceSpace(input1_4, 18);
+    printf("result10: question 1.4 expect: Mr\%20John\%20Smith, actually: %s\n", input1_4);
     
     return 0;
 }
