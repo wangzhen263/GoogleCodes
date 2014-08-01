@@ -32,8 +32,8 @@ int main(int argc, const char * argv[])
     printf("result9: question 1.3 expect: 1, actually: %d\n", isPermutation2(input1_3_1, input1_3_2));
     
     char input1_4[] = "Mr John Smith    ";
-    replaceSpace(input1_4, 18);
-    printf("result10: question 1.4 expect: Mr\%20John\%20Smith, actually: %s\n", input1_4);
+    replaceSpace(input1_4, 17);
+    printf("result10: question 1.4 expect: Mr%sJohn%sSmith, actually: %s\n", "%20", "%20", input1_4);
     
     return 0;
 }

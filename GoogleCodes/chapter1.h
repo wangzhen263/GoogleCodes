@@ -110,7 +110,7 @@ static bool isPermutation2(std::string str1, std::string str2) {
 // question 1.4 - solution 1
 static void replaceSpace(char str[], int length) {
     bool isBetweenChars = false;
-    char* tempString = new char[length];
+    char* tempString = new char[length]();
     int tempPos = 0;
     for(int i = 0; i < length; ++i){
         if (str[i] != ' ') {
