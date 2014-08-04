@@ -128,4 +128,59 @@ static void replaceSpace(char str[], int length) {
     }
     memcpy(str, tempString, length);
 }
+
+// question 1.4 - solution 2
+static void replaceSpace2(char str[], int length) {
+    bool isBetweenChars = false;
+    int writePos = length - 1, spaceCount = 0;
+    for(int i = length -1; i >= 0; --i){
+        if (str[i] != ' ') {
+            isBetweenChars = true;
+            for (int j = 0; j < spaceCount; ++j) {
+                str[writePos--] = '0';
+                str[writePos--] = '2';
+                str[writePos--] = '%';
+            }
+            spaceCount = 0;
+            if (writePos >= 0 )
+                str[writePos--] = str[i];
+        } else {
+            if (isBetweenChars) {
+                spaceCount++;
+            }
+        }
+    }
+}
+
+// question 1.5 - solution 1
+static std::string compress(std::string input) {
+    
+    std::string ret;
+    char lastChar = 0;
+    int count = 0;
+    for (int i = 0; i < input.size(); ++i) {
+        if (lastChar != input[i] && count > 0) {
+            ret.push_back(lastChar);
+            char itoa;
+            sprintf(&itoa,"%d",count);
+            ret.push_back(itoa);
+            
+            lastChar = input[i];
+            count = 1;
+        }
+        else {
+            lastChar = input[i];
+            count++;
+        }
+    }
+    ret.push_back(lastChar);
+    char itoa;
+    sprintf(&itoa,"%d",count);
+    ret.push_back(itoa);
+    
+    if (ret.size() >= input.size())
+        return input;
+
+    return ret;
+}
 #endif

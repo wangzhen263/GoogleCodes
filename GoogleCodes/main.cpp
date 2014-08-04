@@ -31,9 +31,16 @@ int main(int argc, const char * argv[])
     printf("result8: question 1.3 expect: 1, actually: %d\n", isPermutation1(input1_3_1, input1_3_2));
     printf("result9: question 1.3 expect: 1, actually: %d\n", isPermutation2(input1_3_1, input1_3_2));
     
-    char input1_4[] = "Mr John Smith    ";
-    replaceSpace(input1_4, 17);
-    printf("result10: question 1.4 expect: Mr%sJohn%sSmith, actually: %s\n", "%20", "%20", input1_4);
+    char input1_4_1[] = "Mr John Smith    ";
+    replaceSpace(input1_4_1, 17);
+    printf("result10: question 1.4 expect: Mr%sJohn%sSmith, actually: %s\n", "%20", "%20", input1_4_1);
+    
+    char input1_4_2[] = "Mr John Smith    ";
+    replaceSpace2(input1_4_2, 17);
+    printf("result11: question 1.4 expect: Mr%sJohn%sSmith, actually: %s\n", "%20", "%20", input1_4_2);
+    
+    std::string input1_5_1 = "aabcccccaaa";
+    printf("result12: question 1.5 expect: a2b1c5a3, actually: %s\n", compress(input1_5_1).c_str());
     
     return 0;
 }
