@@ -25,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D3A018D1990597C003C8A95 /* chapter2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chapter2.h; sourceTree = "<group>"; };
 		0D89AA921974FDDA008AF31B /* GoogleCodes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GoogleCodes; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D89AA951974FDDA008AF31B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0D89AA971974FDDA008AF31B /* GoogleCodes.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = GoogleCodes.1; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 				0D89AA951974FDDA008AF31B /* main.cpp */,
 				0D89AA971974FDDA008AF31B /* GoogleCodes.1 */,
 				0DD29F96197D3BA800E69CC2 /* chapter1.h */,
+				0D3A018D1990597C003C8A95 /* chapter2.h */,
 			);
 			path = GoogleCodes;
 			sourceTree = "<group>";

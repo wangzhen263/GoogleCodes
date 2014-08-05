@@ -183,4 +183,38 @@ static std::string compress(std::string input) {
 
     return ret;
 }
+
+// run
+static void chapter1_run() {
+    // input: 3yWYfPLfplC3f5k
+    std::string input1_1 = "3yWYfPLfplC3f5k";
+    std::string input1_1_2 = "abcdefgABCDEFG";
+    
+    printf("result1: question 1.1 expect: 0, actually: %d. \n", checkUniqueString1(input1_1));
+    printf("result2: question 1.1 expect: 0, actually: %d. \n", checkUniqueString2(input1_1));
+    printf("result3: question 1.1 expect: 0, actually: %d. \n", checkUniqueString3(input1_1));
+    printf("result4: question 1.1 expect: 1, actually: %d. \n", checkUniqueString1(input1_1_2));
+    printf("result5: question 1.1 expect: 1, actually: %d. \n", checkUniqueString2(input1_1_2));
+    printf("result6: question 1.1 expect: 1, actually: %d. \n", checkUniqueString3(input1_1_2));
+    
+    std::string input1_2 = "abcdefgGFEDCBA";
+    reverse(input1_2);
+    printf("result7: question 1.2 expect: ABCDEFGgfedcba, actually: %s\n", input1_2.c_str());
+    
+    std::string input1_3_1 = "abcdefgGFEDCBA";
+    std::string input1_3_2 = "ABCDEFGgfedcba";
+    printf("result8: question 1.3 expect: 1, actually: %d\n", isPermutation1(input1_3_1, input1_3_2));
+    printf("result9: question 1.3 expect: 1, actually: %d\n", isPermutation2(input1_3_1, input1_3_2));
+    
+    char input1_4_1[] = "Mr John Smith    ";
+    replaceSpace(input1_4_1, 17);
+    printf("result10: question 1.4 expect: Mr%sJohn%sSmith, actually: %s\n", "%20", "%20", input1_4_1);
+    
+    char input1_4_2[] = "Mr John Smith    ";
+    replaceSpace2(input1_4_2, 17);
+    printf("result11: question 1.4 expect: Mr%sJohn%sSmith, actually: %s\n", "%20", "%20", input1_4_2);
+    
+    std::string input1_5_1 = "aabcccccaaa";
+    printf("result12: question 1.5 expect: a2b1c5a3, actually: %s\n", compress(input1_5_1).c_str());
+}
 #endif
