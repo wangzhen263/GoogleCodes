@@ -150,6 +150,41 @@ static LList_t* midByX(LList_t* list, int x) {
     return list;
 }
 
+// question 2.5 - solution part 1
+static int intReverseParser(LList_t* num) {
+    int power = 0;
+    int ret = 0;
+    while (num) {
+        ret += num->value * (10^power++);
+    }
+    return ret;
+}
+
+static LList_t* intToReverseList(int num) {
+    LList_t* ret = NULL;
+    int temp = 0;
+    while (num != 0) {
+        int value = (num - (temp = num/10) * 10);
+        LList_t* elem = new LList_t;
+        elem->value = value;
+        elem->next = NULL;
+        if (ret)
+            ret->next = elem;
+        else
+            ret = elem;
+        
+        num = temp;
+    }
+    
+    return ret;
+}
+
+static LList_t* add1(LList_t* num1, LList_t* num2) {
+    int int1 = intReverseParser(num1);
+    int int2 = intReverseParser(num2);
+    return intToReverseList(int1 + int2);
+}
+
 // run
 static void chapter2_run() {
     LList_t* list = new LList_t;
@@ -207,6 +242,32 @@ static void chapter2_run() {
         
         while (ret) {
             printf("print element in midByX %d seperated by value: %d \n", (ret->value), 50);
+            ret = ret->next;
+        }
+    }
+    
+    // question 2.4
+    {
+        LList_t* input1 = new LList_t;
+        input1->value = 7;
+        input1->next = new LList_t;
+        input1->next->value = 1;
+        input1->next->next = new LList_t;
+        input1->next->next->value = 6;
+        input1->next->next->next = NULL;
+        
+        LList_t* input2 = new LList_t;
+        input2->value = 5;
+        input2->next = new LList_t;
+        input2->next->value = 9;
+        input2->next->next = new LList_t;
+        input2->next->next->value = 2;
+        input2->next->next->next = NULL;
+        
+//        LList_t* ret = add1(input1, input2);
+        LList_t* ret = input2;
+        while (ret) {
+            printf("print int result: %d \n", (ret->value));
             ret = ret->next;
         }
     }
