@@ -117,6 +117,39 @@ static void removeMid(LList_t* list) {
     delete tmp;
 }
 
+// question 2.4 - solution 1
+static LList_t* midByX(LList_t* list, int x) {
+    if (!list)
+        return NULL;
+    
+    LList_t* lower = NULL, *lptr = NULL, *higher = NULL, *hptr = NULL;
+    
+    while (list) {
+        if (list->value < x) {
+            if (!lower)
+                lower = lptr = list;
+            else {
+                lptr->next = list;
+                lptr = lptr->next;
+            }
+        } else {
+            if (!higher)
+                higher = hptr = list;
+            else {
+                hptr->next = list;
+                hptr = hptr->next;
+            }
+        }
+        
+        list = list->next;
+    }
+    lptr->next = NULL;
+    hptr->next = NULL;
+    list = lower;
+    lptr->next = higher;
+    return list;
+}
+
 // run
 static void chapter2_run() {
     LList_t* list = new LList_t;
@@ -165,6 +198,17 @@ static void chapter2_run() {
     {
         LList_t* input = list;
         removeMid(input);
+    }
+    
+    // question 2.4
+    {
+        LList_t* input = list;
+        LList* ret = midByX(input, 50);
+        
+        while (ret) {
+            printf("print element in midByX %d seperated by value: %d \n", (ret->value), 50);
+            ret = ret->next;
+        }
     }
 }
 
