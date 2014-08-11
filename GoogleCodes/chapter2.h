@@ -194,6 +194,7 @@ static LList_t* addReverseLists(LList_t* num1, LList_t* num2) {
     return intToReverseList(intReverseParser(num1) + intReverseParser(num2));
 }
 
+// question 2.5 - solution part 2
 static int intForwardParser(LList_t* num) {
     int ret = 0;
     while(num) {
@@ -227,6 +228,52 @@ static LList_t* addForwardLists(LList_t* num1, LList_t* num2) {
         return NULL;
     
     return intToForwardList(intForwardParser(num1) + intForwardParser(num2));
+}
+
+// question 2.6 - solution
+static LList_t* findCircular(LList_t* list, int length) {
+    int trials = length*2;
+    LList_t* first = list;
+    LList_t* second = list;
+    LList_t* ret = NULL;
+    while(first->next != second && trials >= 0) {
+        first = first->next->next;
+        second = second->next;
+        --trials;
+    }
+    
+    if (trials >= 0)
+        ret = second;
+    return ret;
+}
+
+// question 2.7 - solution
+static bool checkPalindrome(LList_t* list) {
+    LList_t* head = list;
+    LList_t* reverse = new LList_t;
+    reverse->value = list->value;
+    reverse->next = NULL;
+    list = list->next;
+    int len = 0;
+    while (list) {
+        LList_t* temp = new LList_t;
+        temp->value = list->value;
+        temp->next = reverse;
+        reverse = temp;
+        list = list->next;
+        ++len;
+    }
+    
+    int run = 0;
+    while (run <=len/2) {
+        if (reverse->value != head->value)
+            return false;
+        reverse = reverse->next;
+        head = head->next;
+        ++run;
+    }
+    
+    return true;
 }
 
 // run
@@ -342,6 +389,50 @@ static void chapter2_run() {
                 ret = ret->next;
             }
         }
+    }
+    
+    // question 2.6
+    {
+        LList_t* input1 = new LList_t;
+        LList_t* circular = NULL;
+        input1->value = 0;
+        input1->next = new LList_t;
+        input1->next->value = 1;
+        input1->next->next = circular = new LList_t;
+        input1->next->next->value = 2;
+        input1->next->next->next = NULL;
+        
+        circular->next = new LList_t;
+        circular->next->value = 3;
+        circular->next->next = new LList_t;
+        circular->next->next->value = 4;
+        circular->next->next->next = circular;
+        
+        LList_t* ret = findCircular(input1, 5);
+        printf("find circular: %d \n", ret->value);
+    }
+    
+    // question 2.7
+    {
+        LList_t* input = new LList_t;
+        input->value=0;
+        input->next = new LList_t;
+        input->next->value = 1;
+        input->next->next = new LList_t;
+        input->next->next->value = 0;
+        input->next->next->next = NULL;
+        
+        printf("is it a palindrome: %d\n", checkPalindrome(input));
+        
+        LList_t* input2 = new LList_t;
+        input2->value=0;
+        input2->next = new LList_t;
+        input2->next->value = 1;
+        input2->next->next = new LList_t;
+        input2->next->next->value = 2;
+        input2->next->next->next = NULL;
+        
+        printf("is it a palindrome2: %d\n", checkPalindrome(input2));
     }
 }
 
