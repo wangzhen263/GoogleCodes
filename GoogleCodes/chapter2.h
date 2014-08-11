@@ -11,6 +11,8 @@
 
 #include <map>
 #include <iostream>
+#include <math.h> 
+
 typedef struct LList {
     int value;
     LList* next;
@@ -155,34 +157,76 @@ static int intReverseParser(LList_t* num) {
     int power = 0;
     int ret = 0;
     while (num) {
-        ret += num->value * (10^power++);
+        ret += num->value * pow(10, power++);
+        num = num->next;
+        
     }
     return ret;
 }
 
 static LList_t* intToReverseList(int num) {
     LList_t* ret = NULL;
+    LList_t* head = NULL;
     int temp = 0;
     while (num != 0) {
         int value = (num - (temp = num/10) * 10);
         LList_t* elem = new LList_t;
         elem->value = value;
         elem->next = NULL;
-        if (ret)
+        if (ret){
             ret->next = elem;
-        else
+            ret = ret->next;
+        }
+        else {
+            head = elem;
             ret = elem;
+        }
         
         num = temp;
     }
     
+    return head;
+}
+
+static LList_t* addReverseLists(LList_t* num1, LList_t* num2) {
+    if (!num1 || !num2)
+        return NULL;
+    return intToReverseList(intReverseParser(num1) + intReverseParser(num2));
+}
+
+static int intForwardParser(LList_t* num) {
+    int ret = 0;
+    while(num) {
+        ret = ret*10 + num->value;
+        num = num->next;
+    }
     return ret;
 }
 
-static LList_t* add1(LList_t* num1, LList_t* num2) {
-    int int1 = intReverseParser(num1);
-    int int2 = intReverseParser(num2);
-    return intToReverseList(int1 + int2);
+static LList_t* intToForwardList(int num) {
+    LList_t* ret = NULL;
+    int temp = 0;
+    while (num != 0) {
+        int value = num - (temp = num/10)*10;
+        LList_t* elem = new LList_t;
+        elem->value = value;
+        if (!ret) {
+            elem->next = NULL;
+            ret = elem;
+        } else {
+            elem->next = ret;
+            ret = elem;
+        }
+        num = temp;
+    }
+    return ret;
+}
+
+static LList_t* addForwardLists(LList_t* num1, LList_t* num2) {
+    if (!num1 || !num2)
+        return NULL;
+    
+    return intToForwardList(intForwardParser(num1) + intForwardParser(num2));
 }
 
 // run
@@ -246,29 +290,57 @@ static void chapter2_run() {
         }
     }
     
-    // question 2.4
+    // question 2.5
     {
-        LList_t* input1 = new LList_t;
-        input1->value = 7;
-        input1->next = new LList_t;
-        input1->next->value = 1;
-        input1->next->next = new LList_t;
-        input1->next->next->value = 6;
-        input1->next->next->next = NULL;
+        // part 1
+        {
+            LList_t* input1 = new LList_t;
+            input1->value = 7;
+            input1->next = new LList_t;
+            input1->next->value = 1;
+            input1->next->next = new LList_t;
+            input1->next->next->value = 6;
+            input1->next->next->next = NULL;
+            
+            LList_t* input2 = new LList_t;
+            input2->value = 5;
+            input2->next = new LList_t;
+            input2->next->value = 9;
+            input2->next->next = new LList_t;
+            input2->next->next->value = 2;
+            input2->next->next->next = NULL;
+            
+            LList_t* ret = addReverseLists(input1, input2);
+
+            while (ret) {
+                printf("print int result: %d \n", (ret->value));
+                ret = ret->next;
+            }
+        }
         
-        LList_t* input2 = new LList_t;
-        input2->value = 5;
-        input2->next = new LList_t;
-        input2->next->value = 9;
-        input2->next->next = new LList_t;
-        input2->next->next->value = 2;
-        input2->next->next->next = NULL;
-        
-//        LList_t* ret = add1(input1, input2);
-        LList_t* ret = input2;
-        while (ret) {
-            printf("print int result: %d \n", (ret->value));
-            ret = ret->next;
+        // part 2
+        {
+            LList_t* input1 = new LList_t;
+            input1->value = 6;
+            input1->next = new LList_t;
+            input1->next->value = 1;
+            input1->next->next = new LList_t;
+            input1->next->next->value = 7;
+            input1->next->next->next = NULL;
+            
+            LList_t* input2 = new LList_t;
+            input2->value = 2;
+            input2->next = new LList_t;
+            input2->next->value = 9;
+            input2->next->next = new LList_t;
+            input2->next->next->value = 5;
+            input2->next->next->next = NULL;
+            
+            LList_t* ret = addForwardLists(input1, input2);
+            while (ret) {
+                printf("try forward: %d \n", (ret->value));
+                ret = ret->next;
+            }
         }
     }
 }
