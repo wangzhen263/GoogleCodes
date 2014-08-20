@@ -9,11 +9,13 @@
 #include <iostream>
 #include "chapter1.h"
 #include "chapter2.h"
+#include "chapter3.h"
 
 int main(int argc, const char * argv[])
 {
     chapter1_run();
     chapter2_run();
+    chapter3_run();
     return 0;
 }
 
